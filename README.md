@@ -1,2 +1,2 @@
-# akshayshirude.github.io
-Portfolio website - https://akshayshirude.github.io/
+# a-shirude.github.io
+Portfolio website - https://a-shirude.github.io/
