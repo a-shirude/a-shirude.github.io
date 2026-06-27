@@ -1,143 +1,373 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Akshay Shirude</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
-
-/* Style the body */
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-}
-
-/* Header/logo Title */
-.header {
-  padding: 80px;
-  text-align: center;
-  background: #1abc9c;
-  color: white;
-}
-
-/* Increase the font size of the heading */
-.header h1 {
-  font-size: 40px;
-}
-
-/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
-.navbar {
-  overflow: hidden;
-  background-color: #333;
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0;
-}
-
-/* Style the navigation bar links */
-.navbar a {
-  float: left;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 20px;
-  text-decoration: none;
-}
-
-
-/* Right-aligned link */
-.navbar a.right {
-  float: right;
-}
-
-/* Change color on hover */
-.navbar a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Active/current link */
-.navbar a.active {
-  background-color: #666;
-  color: white;
-}
-
-/* Column container */
-.row {  
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-}
-
-/* Create two unequal columns that sits next to each other */
-/* Sidebar/left column */
-.side {
-  -ms-flex: 30%; /* IE10 */
-  flex: 30%;
-  background-color: #f1f1f1;
-  padding: 20px;
-}
-
-/* Main column */
-.main {   
-  -ms-flex: 70%; /* IE10 */
-  flex: 70%;
-  background-color: white;
-  padding: 20px;
-}
-
-/* Fake image, just for this example */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-}
-
-/* Footer */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
-}
-
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 700px) {
-  .row {   
-    flex-direction: column;
-  }
-}
-
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-  .navbar a {
-    float: none;
-    width: 100%;
-  }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Akshay Shirude - Senior Software Engineer specializing in distributed systems, Go, and Python. Available for consulting and mentoring.">
+    <title>Akshay Shirude | Senior Software Engineer & Tech Consultant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="grid-bg"></div>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">AS</span>
+                <span class="logo-bracket">/&gt;</span>
+            </a>
+            <div class="nav-links">
+                <a href="#about" class="nav-link"><span class="nav-number">01.</span> About</a>
+                <a href="#experience" class="nav-link"><span class="nav-number">02.</span> Work</a>
+                <a href="#skills" class="nav-link"><span class="nav-number">03.</span> Stack</a>
+                <a href="#contact" class="nav-link"><span class="nav-number">04.</span> Contact</a>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <circle cx="10" cy="10" r="4" fill="currentColor"/>
+                        <path d="M10 0v4m0 12v4M20 10h-4M4 10H0m16.5-6.5l-2.8 2.8M6.3 13.7l-2.8 2.8m13-13l-2.8 2.8M6.3 6.3L3.5 3.5" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M17.3 11.9a8 8 0 01-10.2-10.2A8 8 0 1017.3 11.9z" fill="currentColor"/>
+                    </svg>
+                </button>
+            </div>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
 
-<div class="header">
-  <h1>Akshay Shirude</h1>
-  <p><b>Software Engineer</b></p>
-</div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-intro">Hi, my name is</div>
+            <h1 class="hero-name">Akshay Shirude.</h1>
+            <h2 class="hero-tagline">I architect AI/ML and distributed systems at scale.</h2>
+            <p class="hero-description">
+                Senior Software Engineer with <span class="highlight">8+ years</span> building high-throughput systems in
+                <span class="highlight">Go</span> and <span class="highlight">Python</span>. Currently engineering
+                <span class="highlight">ransomware detection</span> pipelines processing at
+                <span class="company-highlight">Index Engines</span>. Early adopter of <span class="highlight">agentic AI tooling</span>,
+                achieving <span class="highlight">20% productivity gains</span> in team delivery.
+            </p>
+            <div class="hero-cta">
+                <a href="#contact" class="btn btn-primary">
+                    <span>Available for Consulting</span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </a>
+                <a href="mailto:akshayshirude1@gmail.com" class="btn btn-secondary">
+                    Get in Touch
+                </a>
+            </div>
+        </div>
+    </section>
 
-<div class="navbar">
-  <a href="#" class="active">Home</a>
-</div>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="section-number">01.</span> What I Do
+            </h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I specialize in designing and scaling distributed systems that handle enterprise workloads. My expertise spans the full stack of backend engineering—from microservices architecture to event-driven pipelines.</p>
+                    <div class="focus-areas">
+                        <div class="focus-item">
+                            <div class="focus-icon">→</div>
+                            <div>
+                                <h4>Technical Consulting</h4>
+                                <p>Architecture design, system optimization, distributed systems strategy</p>
+                            </div>
+                        </div>
+                        <div class="focus-item">
+                            <div class="focus-icon">→</div>
+                            <div>
+                                <h4>AI-Assisted Development</h4>
+                                <p>Agentic AI adoption, Claude Code/Copilot integration, team productivity</p>
+                            </div>
+                        </div>
+                        <div class="focus-item">
+                            <div class="focus-icon">→</div>
+                            <div>
+                                <h4>Engineering Mentorship</h4>
+                                <p>Go/Python expertise, API design, concurrency patterns, AI tooling best practices</p>
+                            </div>
+                        </div>
+                        <div class="focus-item">
+                            <div class="focus-icon">→</div>
+                            <div>
+                                <h4>Performance Engineering</h4>
+                                <p>High-throughput systems, optimization, scalability solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-value">10TB</div>
+                        <div class="stat-label">Daily Data Processing</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">8+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">50%</div>
+                        <div class="stat-label">Reduced Onboarding Time</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">20%</div>
+                        <div class="stat-label">Improved Throughput</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="row">
-  <div class="side">
-    <h2>About Me</h2>
-    <p>Experienced Software Engineer with a demonstrated history of working in the computer software industry. Skilled in Data Structures, Algorithms, Data analytics and back-end programming technologies C#, NodeJS, SQL. Exploring Machine Learning techniques with Python.</p>
-   </div>
-</div>
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="section-number">02.</span> Where I've Worked
+            </h2>
+            <div class="experience-container">
+                <div class="company-tabs">
+                    <button class="tab-btn active" data-company="index">Index Engines</button>
+                    <button class="tab-btn" data-company="open">Open Financial</button>
+                    <button class="tab-btn" data-company="pavilion">Pavilion Data</button>
+                    <button class="tab-btn" data-company="talentica">Talentica</button>
+                    <button class="tab-btn" data-company="siemens">Siemens</button>
+                </div>
+                <div class="company-content">
+                    <!-- Index Engines -->
+                    <div class="company-panel active" data-company="index">
+                        <h3>Senior Software Engineer <span class="company-at">@</span> <span class="company-name">Index Engines</span></h3>
+                        <p class="job-period">October 2023 — Present</p>
+                        <ul class="job-details">
+                            <li>Developing <strong>ransomware detection</strong> modules processing storage data at enterprise scale</li>
+                            <li><strong>AI-assisted development:</strong> Pioneered agentic AI adoption (Claude Code, Copilot), improving team delivery by <strong>20%</strong>. Established best practices and workflows for team</li>
+                            <li>Mentored engineers on API security, concurrency patterns, and AI tooling integration</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span>Go</span><span>Python</span><span>PostgreSQL</span><span>Agentic AI</span><span>Microservices</span>
+                        </div>
+                    </div>
+                    <!-- Open Financial -->
+                    <div class="company-panel" data-company="open">
+                        <h3>Senior Software Engineer <span class="company-at">@</span> <span class="company-name">Open Financial Technologies</span></h3>
+                        <p class="job-period">November 2022 — September 2023</p>
+                        <ul class="job-details">
+                            <li>Owned loan lending microservices handling <strong>10K+ applications/month</strong></li>
+                            <li>Enhanced performance <strong>20%</strong> via database optimization and API call reduction</li>
+                            <li>Integrated banking APIs with event-driven patterns ensuring high availability</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span>Go</span><span>Event-Driven</span><span>Banking APIs</span><span>PostgreSQL</span>
+                        </div>
+                    </div>
+                    <!-- Pavilion -->
+                    <div class="company-panel" data-company="pavilion">
+                        <h3>Senior Software Engineer <span class="company-at">@</span> <span class="company-name">Pavilion Data Systems</span></h3>
+                        <p class="job-period">March 2022 — October 2022</p>
+                        <ul class="job-details">
+                            <li>Built management APIs for HA NVMe-oF storage systems</li>
+                            <li>Architected async event pipeline with RabbitMQ + InfluxDB for real-time metrics</li>
+                            <li>Designed RESTful APIs improving observability and reducing debug time</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span>RabbitMQ</span><span>InfluxDB</span><span>REST APIs</span><span>NVMe-oF</span>
+                        </div>
+                    </div>
+                    <!-- Talentica -->
+                    <div class="company-panel" data-company="talentica">
+                        <h3>Senior Software Engineer <span class="company-at">@</span> <span class="company-name">Talentica Software</span></h3>
+                        <p class="job-period">August 2018 — March 2022</p>
+                        <ul class="job-details">
+                            <li>Designed parallel ETL framework for multi-TB datasets via DB range partitioning</li>
+                            <li>Automated CI/CD with Jenkins reducing installation time <strong>40%</strong></li>
+                            <li><strong>SPOT Award</strong> for technical excellence and product innovation</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span>Python</span><span>ETL</span><span>Jenkins</span><span>CI/CD</span>
+                        </div>
+                    </div>
+                    <!-- Siemens -->
+                    <div class="company-panel" data-company="siemens">
+                        <h3>Software Developer <span class="company-at">@</span> <span class="company-name">Siemens</span></h3>
+                        <p class="job-period">July 2017 — August 2018</p>
+                        <ul class="job-details">
+                            <li>Shipped features across 2 releases for distributed computing product (SOA)</li>
+                            <li>Improved unit test coverage and system logging for legacy codebase</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span>SOA</span><span>Distributed Systems</span><span>XML</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="section-number">03.</span> Tech Stack
+            </h2>
+            <div class="skills-grid">
+                <div class="skill-category highlight-category">
+                    <div class="category-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" fill="none"/>
+                        </svg>
+                        <h3>AI/ML & Agentic Systems</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li>Claude Code (Agentic AI)</li>
+                        <li>GitHub Copilot</li>
+                        <li>LLM Integration Patterns</li>
+                        <li>AI-Assisted Development</li>
+                        <li>Prompt Engineering</li>
+                        <li>ML Ops Best Practices</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <div class="category-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <h3>Languages & Frameworks</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li>Go (Gin, Gorm)</li>
+                        <li>Python (FastAPI, Flask)</li>
+                        <li>SQL</li>
+                        <li>Shell Scripting</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <div class="category-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <circle cx="5" cy="12" r="2" fill="currentColor"/>
+                            <circle cx="12" cy="5" r="2" fill="currentColor"/>
+                            <circle cx="19" cy="12" r="2" fill="currentColor"/>
+                            <circle cx="12" cy="19" r="2" fill="currentColor"/>
+                            <path d="M7 11l3-4m0 8l-3-4m8-4l3 4m0 0l-3 4" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <h3>Distributed Systems</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li>Kafka</li>
+                        <li>RabbitMQ</li>
+                        <li>NATS</li>
+                        <li>Event-Driven Architecture</li>
+                        <li>ETL Pipelines</li>
+                        <li>High-Availability Design</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <div class="category-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect x="3" y="3" width="7" height="7" stroke="currentColor" stroke-width="2"/>
+                            <rect x="14" y="3" width="7" height="7" stroke="currentColor" stroke-width="2"/>
+                            <rect x="3" y="14" width="7" height="7" stroke="currentColor" stroke-width="2"/>
+                            <rect x="14" y="14" width="7" height="7" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <h3>Databases</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li>PostgreSQL</li>
+                        <li>MySQL</li>
+                        <li>Redis (Cache & Pub/Sub)</li>
+                        <li>InfluxDB (Time-series)</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <div class="category-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 15v4a2 2 0 002 2h14a2 2 0 002-2v-4M7 10l5 5 5-5M12 3v12" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <h3>Cloud & DevOps</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li>AWS (S3, EC2, Lambda)</li>
+                        <li>Docker</li>
+                        <li>Kubernetes</li>
+                        <li>Jenkins</li>
+                        <li>CI/CD Pipelines</li>
+                    </ul>
+                </div>
+            </div>
 
+            <!-- Education -->
+            <div class="education">
+                <h3 class="education-title">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z" fill="currentColor"/>
+                        <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z" fill="currentColor"/>
+                    </svg>
+                    Education
+                </h3>
+                <div class="education-card">
+                    <div class="education-content">
+                        <h4>B.Tech in Computer Science and Engineering</h4>
+                        <p class="education-school">National Institute of Technology, Nagpur (VNIT)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <p class="contact-overline"><span class="section-number">04.</span> What's Next?</p>
+                <h2 class="contact-title">Get In Touch</h2>
+                <p class="contact-description">
+                    I'm currently available for consulting, mentoring, and technical advisory roles.
+                    Whether you need help architecting distributed systems, optimizing performance,
+                    or leveling up your engineering team—let's talk.
+                </p>
+                <a href="mailto:akshayshirude1@gmail.com" class="btn btn-primary-large">
+                    Say Hello
+                </a>
+                <div class="contact-links">
+                    <a href="https://github.com/a-shirude" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/in/ashirude" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14m-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 001.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 00-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                    <a href="mailto:akshayshirude1@gmail.com" class="social-link" aria-label="Email">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Designed & Built by Akshay Shirude</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
